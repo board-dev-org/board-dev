@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get in touch — Board.Dev</title>
+<meta name="description" content="Contact Board.Dev.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html">BOARD.<span>DEV</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" onclick="var m=document.getElementById('menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">Menu ☰</button>
+    <ul class="nav-links" id="menu">
+      <li><a href="what-we-do.html">What We Do</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li><a class="btn" href="get-in-touch.html">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+
+<section class="section band" style="min-height:70vh"><div class="wrap">
+  <h1 style="text-align:center;font-size:1.7rem;font-weight:500;margin-bottom:28px">Get in touch</h1>
+  <form class="form-card" id="contact" onsubmit="event.preventDefault();document.getElementById('thanks').hidden=false;this.reset()">
+    <div class="row">
+      <div><label for="fn">First Name<i>*</i></label><input id="fn" name="firstname" required></div>
+      <div><label for="ln">Last Name<i>*</i></label><input id="ln" name="lastname" required></div>
+    </div>
+    <label for="em">Email<i>*</i></label><input id="em" name="email" type="email" required>
+    <label for="org">Organization</label><input id="org" name="company">
+    <label for="loc">Location<i>*</i></label>
+    <select id="loc" name="location" required><option value="">Please Select</option><option>United States</option><option>Canada</option><option>Other</option></select>
+    <label for="role">Professional role or function<i>*</i></label>
+    <select id="role" name="role" required><option value="">Please Select</option><option>Nonprofit executive</option><option>Board member</option><option>Funder</option><option>Corporate leader</option><option>Other</option></select>
+    <label for="int">I am interested in:<i>*</i></label>
+    <select id="int" name="interest" required><option value="">Please Select</option><option>Board tech fluency training</option><option>Board service for my team</option><option>Partnering as a company</option><option>Funding this work</option><option>Resources and newsletter</option></select>
+    <p class="legal">Board.Dev is committed to protecting and respecting your privacy. From time to time, we would like to contact you about new events, resources and other content that may be of interest to you. You can unsubscribe from these communications at any time. If you consent to us contacting you for this purpose, please check the box below:</p>
+    <label class="consent"><input type="checkbox" id="consent" name="consent"> I agree to receive marketing communications from Board.Dev.</label>
+    <p class="legal">By clicking submit below, you consent to allow Board.Dev to store and process the personal information submitted above to provide you the content requested.</p>
+    <button class="submit" type="submit">Submit</button>
+    <p id="thanks" hidden style="text-align:center;color:var(--navy);margin-top:14px;font-weight:600">Thanks — we'll be in touch.</p>
+  </form>
+  <p class="form-note">V1 note: this form will be replaced by the live HubSpot embed.</p>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="index.html">BOARD.<span>DEV</span></a>
+      <p>Copyright © 2025 Board.Dev – All Rights Reserved.</p>
+      <p>Board.Dev is a social enterprise fiscally sponsored by <a href="https://www.communityin.org/" target="_blank" rel="noopener">Community Initiatives</a>, a 501©(3). Engagements can be structured as corporate partnerships or tax-deductible charitable contributions.</p>
+      <p><a href="privacy-policy.html">Privacy Policy</a></p>
+    </div>
+    <ul>
+      <li><a href="what-we-do.html">What We Do</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about-us.html">About</a></li>
+      <li><a class="btn" href="get-in-touch.html">Get in touch</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
