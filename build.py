@@ -36,9 +36,7 @@ NAV = """<header class="nav">
 NEWSLETTER = """<section class="section"><div class="wrap">
   <div class="newsletter">
     <h2>Join our newsletter for updates</h2>
-    <div class="hs-form hs-newsletter" id="newsletter-form"></div>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-    <script>hbspt.forms.create({portalId:"45089564",formId:"383448a3-d85c-4007-b78e-826c3f0ce74c",region:"na1",target:"#newsletter-form"});</script>
+    <a class="btn btn-light" href="newsletter.html">Subscribe</a>
   </div>
 </div></section>
 """
@@ -126,7 +124,7 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
 <section class="section"><div class="wrap">
   <div class="logo-wall">
     <div class="featured"><img src="assets/img/logos/okta.png" alt="Okta"></div>
-    <div class="grid"><img src="assets/img/logos/atlassian.png" alt="Atlassian" loading="lazy"><img src="assets/img/logos/aws.png" alt="Amazon Web Services" loading="lazy"><img src="assets/img/logos/benevity.png" alt="Benevity" loading="lazy"><img src="assets/img/logos/cdw.png" alt="CDW" loading="lazy"><img src="assets/img/logos/chicago-scholars.png" alt="Chicago Scholars" loading="lazy"><img src="assets/img/logos/cics.png" alt="Chicago International Charter School" loading="lazy"><img src="assets/img/logos/compass-working-capital.png" alt="Compass Working Capital" loading="lazy"><img src="assets/img/logos/cuny.png" alt="CUNY" loading="lazy"><img src="assets/img/logos/colorstack.png" alt="ColorStack" loading="lazy"><img src="assets/img/logos/dell.png" alt="Dell Technologies" loading="lazy"><img src="assets/img/logos/develop-for-good.png" alt="Develop for Good" loading="lazy"><img src="assets/img/logos/empowr.png" alt="Empowr" loading="lazy"><img src="assets/img/logos/fast-forward.png" alt="Fast Forward" loading="lazy"><img src="assets/img/logos/finequity.png" alt="finEQUITY" loading="lazy"><img src="assets/img/logos/food-connect.png" alt="Food Connect" loading="lazy"><img src="assets/img/logos/generation.svg" alt="Generation" loading="lazy"><img src="assets/img/logos/genesys-works.png" alt="Genesys Works" loading="lazy"><img src="assets/img/logos/growing-home.png" alt="Growing Home" loading="lazy"><img src="assets/img/logos/hack-the-hood.png" alt="Hack the Hood" loading="lazy"><img src="assets/img/logos/hera-digital-health.png" alt="HERA Digital Health" loading="lazy"><img src="assets/img/logos/hidden-genius-project.png" alt="The Hidden Genius Project" loading="lazy"><img src="assets/img/logos/human-rights-first.png" alt="Human Rights First" loading="lazy"><img src="assets/img/logos/jvs.png" alt="JVS" loading="lazy"><img src="assets/img/logos/les-ecology-center.png" alt="LES Ecology Center" loading="lazy"><img src="assets/img/logos/linkedin.png" alt="LinkedIn" loading="lazy"><img src="assets/img/logos/pwc.png" alt="PwC" loading="lazy"><img src="assets/img/logos/marin-community-foundation.png" alt="Marin Community Foundation" loading="lazy"><img src="assets/img/logos/morgan-stanley.png" alt="Morgan Stanley" loading="lazy"><img src="assets/img/logos/netapp.png" alt="NetApp" loading="lazy"><img src="assets/img/logos/nethope.png" alt="NetHope" loading="lazy"><img src="assets/img/logos/nten.png" alt="NTEN" loading="lazy"><img src="assets/img/logos/possibility-project.png" alt="The Possibility Project" loading="lazy"><img src="assets/img/logos/rise.png" alt="RISE" loading="lazy"><img src="assets/img/logos/sadie-nash.png" alt="Sadie Nash Leadership Project" loading="lazy"><img src="assets/img/logos/schmidt-futures.png" alt="Schmidt Futures" loading="lazy"><img src="assets/img/logos/servicenow.png" alt="ServiceNow" loading="lazy"><img src="assets/img/logos/techsoup.png" alt="TechSoup" loading="lazy"><img src="assets/img/logos/tipping-point.png" alt="Tipping Point Community" loading="lazy"><img src="assets/img/logos/world-pulse.png" alt="World Pulse" loading="lazy"><img src="assets/img/logos/youthbuild.png" alt="YouthBuild" loading="lazy"></div>
+    <div class="grid"><img src="assets/img/logos/atlassian.png" alt="Atlassian" loading="lazy"><img src="assets/img/logos/aws.png" alt="Amazon Web Services" loading="lazy"><img src="assets/img/logos/benevity.png" alt="Benevity" loading="lazy"><img src="assets/img/logos/cdw.png" alt="CDW" loading="lazy"><img src="assets/img/logos/chicago-scholars.png" alt="Chicago Scholars" loading="lazy"><img src="assets/img/logos/cics.png" alt="Chicago International Charter School" loading="lazy"><img src="assets/img/logos/compass-working-capital.png" alt="Compass Working Capital" loading="lazy"><img src="assets/img/logos/cuny.png" alt="CUNY" loading="lazy"><img src="assets/img/logos/colorstack.png" alt="ColorStack" loading="lazy"><img src="assets/img/logos/dell.png" alt="Dell Technologies" loading="lazy"><img src="assets/img/logos/develop-for-good.png" alt="Develop for Good" loading="lazy"><img src="assets/img/logos/empowr.png" alt="Empowr" loading="lazy"><img src="assets/img/logos/fast-forward.png" alt="Fast Forward" loading="lazy"><img src="assets/img/logos/finequity.png" alt="finEQUITY" loading="lazy"><img src="assets/img/logos/food-connect.png" alt="Food Connect" loading="lazy"><img src="assets/img/logos/generation.svg" alt="Generation" loading="lazy"><img src="assets/img/logos/genesys-works.png" alt="Genesys Works" loading="lazy"><img src="assets/img/logos/growing-home.png" alt="Growing Home" loading="lazy"><img src="assets/img/logos/hack-the-hood.png" alt="Hack the Hood" loading="lazy"><img src="assets/img/logos/hera-digital-health.png" alt="HERA Digital Health" loading="lazy"><img src="assets/img/logos/hidden-genius-project.png" alt="The Hidden Genius Project" loading="lazy"><img src="assets/img/logos/human-rights-first.png" alt="Human Rights First" loading="lazy"><img src="assets/img/logos/jvs.png" alt="JVS" loading="lazy"><img src="assets/img/logos/les-ecology-center.png" alt="LES Ecology Center" loading="lazy"><img src="assets/img/logos/linkedin.png" alt="LinkedIn" loading="lazy"><img src="assets/img/logos/pwc.png" alt="PwC" loading="lazy"><img src="assets/img/logos/marin-community-foundation.png" alt="Marin Community Foundation" loading="lazy"><img src="assets/img/logos/morgan-stanley.png" alt="Morgan Stanley" loading="lazy"><img src="assets/img/logos/netapp.png" alt="NetApp" loading="lazy"><img src="assets/img/logos/nethope.png" alt="NetHope" loading="lazy"><img src="assets/img/logos/nten.png" alt="NTEN" loading="lazy"><img src="assets/img/logos/possibility-project.png" alt="The Possibility Project" loading="lazy"><img src="assets/img/logos/rise.png" alt="RISE" loading="lazy"><img src="assets/img/logos/sadie-nash.png" alt="Sadie Nash Leadership Project" loading="lazy"><img src="assets/img/logos/schmidt-futures.png" alt="Schmidt Futures" loading="lazy"><img src="assets/img/logos/servicenow.png" alt="ServiceNow" loading="lazy"><img src="assets/img/logos/techsoup.png" alt="TechSoup" loading="lazy"><img src="assets/img/logos/tipping-point.png" alt="Tipping Point Community" loading="lazy"><img src="assets/img/logos/world-pulse.png" alt="World Pulse" loading="lazy"><img src="assets/img/logos/raise-for-good.png" alt="Raise for Good" loading="lazy"><img src="assets/img/logos/justworks.png" alt="Justworks" loading="lazy"><img src="assets/img/logos/global-business-coalition-for-education.png" alt="Global Business Coalition for Education" loading="lazy"><img src="assets/img/logos/youthbuild.png" alt="YouthBuild" loading="lazy"></div>
   </div>
   <p class="callout" style="margin-top:40px;font-size:1.15rem;color:var(--ink)">Through the <b>Nonprofit Tech Governance Congress</b>, Board.Dev convenes the leaders setting standards for AI decision-making in the social sector—and through our annual salon series, brings together nonprofit CEOs, funders, and corporate leaders to design the board nonprofits need now.</p>
   <p style="text-align:center;margin-top:20px"><a class="btn btn-navy" href="about-us.html">Learn more</a></p>
@@ -145,9 +143,19 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
 
 <section class="section band"><div class="wrap">
   <h2 style="text-align:center;font-size:1.5rem;font-weight:500;margin-bottom:24px">Why Board.Dev?</h2>
-  <div class="quote-card">
-    <p>It was just this beautiful gift that we received an email from Board.Dev. You don't have that fulltime, dedicated tech data person on staff—that high-level strategy is expensive. Even for us, with a $160 million budget, it's not really within the realm of possibilities. I gasped to think that there are tech professionals who feel like they would not be a value add to a nonprofit. This is such an enormous need.</p>
-    <cite>Meaghan Jennings, ED, Chicago International Charter School</cite>
+  <div class="quote-row">
+    <div class="quote-card">
+      <p>Board members are essential to moving AI and tech forward. Their primary job in governance is to support the strategic direction. They aren't setting it, but they are making sure it's moving—and AI strategy is no different.</p>
+      <cite>Shannon Farley, Fast Forward</cite>
+    </div>
+    <div class="quote-card">
+      <p>I'm a physician and know nothing about the IT side of things. We need someone not to actually build the technology but to help us visualize how the infrastructure could help us move forward. It's a series of decisions with which we could use tech expertise as we grow.</p>
+      <cite>Aral Surmeli, Founder, HERA Digital Health</cite>
+    </div>
+    <div class="quote-card">
+      <p>It was just this beautiful gift that we received an email from Board.Dev. You don't have that fulltime, dedicated tech data person on staff—that high-level strategy is expensive. Even for us, with a $160 million budget, it's not really within the realm of possibilities. I gasped to think that there are tech professionals who feel like they would not be a value add to a nonprofit. This is such an enormous need.</p>
+      <cite>Meaghan Jennings, ED, Chicago International Charter School</cite>
+    </div>
   </div>
 </div></section>
 
@@ -284,6 +292,16 @@ pages["get-in-touch.html"] = dict(title="Get in touch — Board.Dev", desc="Cont
   <div class="form-card hs-form" id="contact-form"></div>
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
   <script>hbspt.forms.create({portalId:"45089564",formId:"e7e9d42a-2db1-42a0-ac6c-a5b3f6a86a66",region:"na1",target:"#contact-form"});</script>
+</div></section>
+""")
+
+
+pages["newsletter.html"] = dict(title="Newsletter — Board.Dev", desc="Short monthly notes on AI governance, tech leadership, and the work of the Nonprofit Tech Governance Congress.", active=-1, body="""
+<section class="section band" style="min-height:70vh"><div class="wrap">
+  <h1 style="text-align:center;font-size:2rem;font-weight:500;margin-bottom:28px">Join our newsletter</h1>
+  <div class="form-card newsletter-card">
+    <iframe id="hubspotForm" title="Newsletter sign-up" src="https://share.hsforms.com/16MlNR8ilRoqOEsInxyf06gqufbw" width="100%" height="640" frameborder="0" scrolling="no" style="display:block;border:0"></iframe>
+  </div>
 </div></section>
 """)
 
