@@ -175,7 +175,6 @@ pages["what-we-do.html"] = dict(title="What We Do — Board.Dev", desc="How Boar
     <h1>Leadership is the leverage point.</h1>
     <p>Digital transformation doesn't start with tools. It starts with leadership.</p>
     <p>We strengthen nonprofits by building tech fluency at the board level and connecting them with professionals who can help navigate AI, cybersecurity, and digital strategy.</p>
-    {DOTS}
   </div>
 </div></section>
 
