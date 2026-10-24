@@ -101,7 +101,7 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
     <p>Companies face the same gap from the other side. The leaders making AI decisions inside your organization are building judgment in real time—at real cost, and not fast enough.</p>
     <p>Structured board engagement changes that. Board service is where leadership gets tested for real. There's nothing else like it.</p>
   </div>
-  <h2 style="text-align:center;font-size:1.5rem;font-weight:500;margin:40px 0 28px">What we do</h2>
+  <h2 style="text-align:center;font-size:24px;font-weight:500;margin:40px 0 28px">What we do</h2>
   <div class="three">
     <div>
       <div class="ill"><svg width="110" height="110" viewBox="0 0 110 110" aria-hidden="true"><rect x="40" y="10" width="14" height="70" fill="#2f4192" transform="skewX(-12)"/><rect x="70" y="20" width="14" height="60" fill="#2f4192" transform="skewX(-12)"/><circle cx="48" cy="60" r="18" fill="#c92240"/><path d="M20 70 l18 -14 l6 8 z" fill="#fff" stroke="#c92240" stroke-width="3"/></svg></div>
@@ -132,7 +132,7 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
 
 <section class="section" style="padding-top:0"><div class="wrap">
   <div class="band" style="border-radius:var(--radius);padding:36px 28px">
-    <h2 style="text-align:center;font-size:1.5rem;font-weight:500;margin-bottom:24px">See how board service builds leaders and impact</h2>
+    <h2 style="text-align:center;font-size:24px;font-weight:500;margin-bottom:24px">See how board service builds leaders and impact</h2>
     <div class="videos">
       <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose<small>Asana, CPO</small></div></a>
       <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter<small>Okta, VP Global Impact</small></div></a>
@@ -142,7 +142,7 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
 </div></section>
 
 <section class="section band"><div class="wrap">
-  <h2 style="text-align:center;font-size:1.5rem;font-weight:500;margin-bottom:24px">Why Board.Dev?</h2>
+  <h2 style="text-align:center;font-size:24px;font-weight:500;margin-bottom:24px">Why Board.Dev?</h2>
   <div class="quote-row">
     <div class="quote-card">
       <p>Board members are essential to moving AI and tech forward. Their primary job in governance is to support the strategic direction. They aren't setting it, but they are making sure it's moving—and AI strategy is no different.</p>
@@ -192,7 +192,7 @@ pages["what-we-do.html"] = dict(title="What We Do — Board.Dev", desc="How Boar
 </div></section>
 
 <section class="section"><div class="wrap">
-  <h2 style="text-align:center;font-size:1.6rem;font-weight:500;margin-bottom:24px">Corporate Leader Perspectives</h2>
+  <h2 style="text-align:center;font-size:26px;font-weight:500;margin-bottom:24px">Corporate Leader Perspectives</h2>
   <div class="videos two-up">
     <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose (Asana CPO) on how board service shaped his leadership</div></a>
     <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter (Okta) on why board service is a unique lever for social impact</div></a>
@@ -295,7 +295,7 @@ pages["about-us.html"] = dict(title="About — Board.Dev", desc="The founding te
 # ---------- GET IN TOUCH ----------
 pages["get-in-touch.html"] = dict(title="Get in touch — Board.Dev", desc="Contact Board.Dev.", active=-1, body="""
 <section class="section band" style="min-height:70vh"><div class="wrap">
-  <h1 style="text-align:center;font-size:1.7rem;font-weight:500;margin-bottom:28px">Get in touch</h1>
+  <h1 style="text-align:center;font-size:27px;font-weight:500;margin-bottom:28px">Get in touch</h1>
   <div class="form-card hs-form" id="contact-form"></div>
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
   <script>hbspt.forms.create({portalId:"45089564",formId:"e7e9d42a-2db1-42a0-ac6c-a5b3f6a86a66",region:"na1",target:"#contact-form"});</script>
@@ -305,7 +305,7 @@ pages["get-in-touch.html"] = dict(title="Get in touch — Board.Dev", desc="Cont
 
 pages["newsletter.html"] = dict(title="Newsletter — Board.Dev", desc="Short monthly notes on AI governance, tech leadership, and the work of the Nonprofit Tech Governance Congress.", active=-1, body="""
 <section class="section band" style="min-height:70vh"><div class="wrap">
-  <h1 style="text-align:center;font-size:2rem;font-weight:500;margin-bottom:28px">Join our newsletter</h1>
+  <h1 style="text-align:center;font-size:32px;font-weight:500;margin-bottom:28px">Join our newsletter</h1>
   <div class="form-card newsletter-card">
     <iframe id="hubspotForm" title="Newsletter sign-up" src="https://share.hsforms.com/16MlNR8ilRoqOEsInxyf06gqufbw" width="100%" height="640" frameborder="0" scrolling="no" style="display:block;border:0"></iframe>
   </div>
@@ -314,7 +314,7 @@ pages["newsletter.html"] = dict(title="Newsletter — Board.Dev", desc="Short mo
 
 pages["privacy-policy.html"] = dict(title="Privacy Policy — Board.Dev", desc="Board.Dev privacy policy.", active=-1, body="""
 <section class="section"><div class="wrap prose" style="max-width:720px">
-  <h1 style="font-size:1.7rem;font-weight:500">Board.Dev Privacy Policy</h1>
+  <h1 style="font-size:27px;font-weight:500">Board.Dev Privacy Policy</h1>
   <p class="eyebrow" style="margin-top:8px">Last updated: August 20, 2026</p>
   <p>Board.Dev connects tech-fluent leaders with nonprofit boards and delivers AI leadership programs for nonprofits and corporate partners. This policy explains what information we collect, how we use it, and who we share it with.</p>
   <h2>1. Information we collect</h2>
