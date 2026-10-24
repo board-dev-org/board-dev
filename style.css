@@ -203,7 +203,6 @@ footer .logo img{height:34px}
 .hs-form{max-width:480px;margin:0 auto}
 .hs-form.form-card{min-height:320px}
 .newsletter-card{max-width:720px;padding:16px}
-.prose h2{margin-top:28px;font-size:1.15rem}
 @media (max-width:820px){.logo-wall .grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:480px){.logo-wall .grid{grid-template-columns:repeat(2,1fr)}.logo img{height:26px}}
 .quote-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
@@ -221,3 +220,9 @@ footer .logo img{height:34px}
 h2{font-size:24px}
 .hero h1{font-size:clamp(30px,4.4vw,48px)}
 .res h3{font-size:21px}.res p{font-size:13.6px}.res .btn{font-size:15px}
+/* What We Do / long-form text: bigger and centred */
+.prose{max-width:860px;margin-left:auto;margin-right:auto}
+.prose h2{font-size:28px;margin-top:36px}
+.prose p{font-size:20px;line-height:1.6;max-width:none;margin-top:14px}
+.prose p.lead{font-size:22px}
+@media (max-width:600px){.prose h2{font-size:24px}.prose p{font-size:18px}.prose p.lead{font-size:19px}}
