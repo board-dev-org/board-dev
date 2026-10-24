@@ -14,6 +14,11 @@ HEAD = """<!doctype html>
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXGZ3Y4XRG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-MXGZ3Y4XRG');</script>
+<!-- HubSpot tracking -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/45089564.js"></script>
 </head>
 <body>
 """
@@ -58,6 +63,16 @@ FOOT = """</main>
     </ul>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.video[data-id]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var id=a.dataset.id, t=a.querySelector('.thumb');
+    t.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    a.classList.add('playing');
+  });
+});
+</script>
 </body>
 </html>
 """
@@ -134,9 +149,9 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
   <div class="band" style="border-radius:var(--radius);padding:36px 28px">
     <h2 style="text-align:center;font-size:24px;font-weight:500;margin-bottom:24px">See how board service builds leaders and impact</h2>
     <div class="videos">
-      <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose<small>Asana, CPO</small></div></a>
-      <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter<small>Okta, VP Global Impact</small></div></a>
-      <a class="video" href="https://www.youtube.com/watch?v=N85-_qqMywg" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/N85-_qqMywg/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Susi Hajeski<small>CDW, Head of Cybersecurity</small></div></a>
+      <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" data-id="L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose<small>Asana, CPO</small></div></a>
+      <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" data-id="na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter<small>Okta, VP Global Impact</small></div></a>
+      <a class="video" href="https://www.youtube.com/watch?v=N85-_qqMywg" data-id="N85-_qqMywg" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/N85-_qqMywg/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Susi Hajeski<small>CDW, Head of Cybersecurity</small></div></a>
     </div>
   </div>
 </div></section>
@@ -193,8 +208,8 @@ pages["what-we-do.html"] = dict(title="What We Do — Board.Dev", desc="How Boar
 <section class="section"><div class="wrap">
   <h2 style="text-align:center;font-size:26px;font-weight:500;margin-bottom:24px">Corporate Leader Perspectives</h2>
   <div class="videos two-up">
-    <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose (Asana CPO) on how board service shaped his leadership</div></a>
-    <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter (Okta) on why board service is a unique lever for social impact</div></a>
+    <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" data-id="L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose (Asana CPO) on how board service shaped his leadership</div></a>
+    <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" data-id="na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter (Okta) on why board service is a unique lever for social impact</div></a>
   </div>
 </div></section>
 
