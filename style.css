@@ -242,3 +242,10 @@ h2{font-size:24px}
 .eyebrow{font-size:14px}
 footer p{font-size:16px}footer ul{font-size:17px}
 .btn-navy,.btn-light{font-size:16px}
+
+.callout{max-width:1000px}
+.callout h2{max-width:none}
+.callout p{max-width:none}
+
+.tagline{font-size:34px;line-height:1.25}
+@media (max-width:600px){.tagline{font-size:26px}}
