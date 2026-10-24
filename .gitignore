@@ -148,3 +148,6 @@ vite.config.ts.timestamp-*
 # Turbo Repo
 .turbo
 .DS_Store
+
+# Raw source assets (originals live here, processed copies in assets/)
+_source/

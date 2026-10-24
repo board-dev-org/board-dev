@@ -10,6 +10,9 @@ HEAD = """<!doctype html>
 <meta name="description" content="{desc}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +20,7 @@ HEAD = """<!doctype html>
 
 NAV = """<header class="nav">
   <div class="wrap">
-    <a class="logo" href="index.html">BOARD.<span>DEV</span></a>
+    <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Board.Dev" width="229" height="32"></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="menu" onclick="var m=document.getElementById('menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">Menu ☰</button>
     <ul class="nav-links" id="menu">
       <li><a href="what-we-do.html"{a1}>What We Do</a></li>
@@ -33,7 +36,9 @@ NAV = """<header class="nav">
 NEWSLETTER = """<section class="section"><div class="wrap">
   <div class="newsletter">
     <h2>Join our newsletter for updates</h2>
-    <a class="btn btn-light" href="get-in-touch.html">Subscribe</a>
+    <div class="hs-form hs-newsletter" id="newsletter-form"></div>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script>hbspt.forms.create({portalId:"45089564",formId:"383448a3-d85c-4007-b78e-826c3f0ce74c",region:"na1",target:"#newsletter-form"});</script>
   </div>
 </div></section>
 """
@@ -42,8 +47,8 @@ FOOT = """</main>
 <footer>
   <div class="wrap">
     <div>
-      <a class="logo" href="index.html">BOARD.<span>DEV</span></a>
-      <p>Copyright © 2025 Board.Dev – All Rights Reserved.</p>
+      <a class="logo" href="index.html"><img src="assets/img/logo-white.png" alt="Board.Dev" width="229" height="32"></a>
+      <p>Copyright © 2026 Board.Dev – All Rights Reserved.</p>
       <p>Board.Dev is a social enterprise fiscally sponsored by <a href="https://www.communityin.org/" target="_blank" rel="noopener">Community Initiatives</a>, a 501©(3). Engagements can be structured as corporate partnerships or tax-deductible charitable contributions.</p>
       <p><a href="privacy-policy.html">Privacy Policy</a></p>
     </div>
@@ -81,12 +86,12 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
     <div>
       <h3>Building the Leadership Nonprofits Need to Make AI Work.</h3>
       <p>A new co-publication of Board.Dev and Dell Technologies based on a national nonprofit survey—a hard look at why the sector is stuck and what leadership teams can do about it.</p>
-      <a class="btn btn-navy" href="resources.html">Read the report</a>
+      <a class="btn btn-navy" href="assets/pdfs/board-dev-dell-building-the-leadership-nonprofits-need-to-make-ai-work.pdf" target="_blank" rel="noopener">Read the report</a>
     </div>
     <div>
       <h3>What can my board do that AI can't?</h3>
       <p>Thirty nonprofit CEOs, funders, and board chairs spent an afternoon in San Francisco on that question.<br>The first dispatch from our 2026 field research, with Okta and AWS.</p>
-      <a class="btn btn-navy" href="resources.html">Read the dispatch</a>
+      <a class="btn btn-navy" href="assets/pdfs/board-dev-sf-dispatch.pdf" target="_blank" rel="noopener">Read the dispatch</a>
     </div>
   </div>
 </div></section>
@@ -119,9 +124,9 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
 </div></section>
 
 <section class="section"><div class="wrap">
-  <div class="logos">
-    <span class="featured">okta</span>
-    <span>COMPASS WORKING CAPITAL</span><span>benevity</span><span>CDW</span><span>CHICAGO SCHOLARS</span><span>CICS</span><span>CUNY</span><span>ColorStack</span><span>DELL</span><span>develop for good</span><span>EMPOWR</span><span>fastforward</span><span>finEQUITY</span><span>Food Connect</span><span>Generation</span><span>GENESYS WORKS</span><span>GROWING HOME</span><span>hack the hood</span><span>HERA Digital Health</span><span>Hidden Genius Project</span><span>Human Rights First</span><span>JVS</span><span>LES Ecology Center</span><span>LinkedIn</span><span>pwc</span><span>Marin Community Foundation</span><span>Morgan Stanley</span><span>NetApp</span><span>NETHOPE</span><span>nten</span><span>The Possibility Project</span><span>RISE</span><span>Sadie Nash Leadership Project</span><span>Schmidt Futures</span><span>servicenow</span><span>techsoup</span><span>Tipping Point Community</span><span>WORLD PULSE</span><span>Raise for Good</span><span>Justworks</span><span>Global Business Coalition for Education</span><span>YouthBuild</span>
+  <div class="logo-wall">
+    <div class="featured"><img src="assets/img/logos/okta.png" alt="Okta"></div>
+    <div class="grid"><img src="assets/img/logos/atlassian.png" alt="Atlassian" loading="lazy"><img src="assets/img/logos/aws.png" alt="Amazon Web Services" loading="lazy"><img src="assets/img/logos/benevity.png" alt="Benevity" loading="lazy"><img src="assets/img/logos/cdw.png" alt="CDW" loading="lazy"><img src="assets/img/logos/chicago-scholars.png" alt="Chicago Scholars" loading="lazy"><img src="assets/img/logos/cics.png" alt="Chicago International Charter School" loading="lazy"><img src="assets/img/logos/compass-working-capital.png" alt="Compass Working Capital" loading="lazy"><img src="assets/img/logos/cuny.png" alt="CUNY" loading="lazy"><img src="assets/img/logos/colorstack.png" alt="ColorStack" loading="lazy"><img src="assets/img/logos/dell.png" alt="Dell Technologies" loading="lazy"><img src="assets/img/logos/develop-for-good.png" alt="Develop for Good" loading="lazy"><img src="assets/img/logos/empowr.png" alt="Empowr" loading="lazy"><img src="assets/img/logos/fast-forward.png" alt="Fast Forward" loading="lazy"><img src="assets/img/logos/finequity.png" alt="finEQUITY" loading="lazy"><img src="assets/img/logos/food-connect.png" alt="Food Connect" loading="lazy"><img src="assets/img/logos/generation.svg" alt="Generation" loading="lazy"><img src="assets/img/logos/genesys-works.png" alt="Genesys Works" loading="lazy"><img src="assets/img/logos/growing-home.png" alt="Growing Home" loading="lazy"><img src="assets/img/logos/hack-the-hood.png" alt="Hack the Hood" loading="lazy"><img src="assets/img/logos/hera-digital-health.png" alt="HERA Digital Health" loading="lazy"><img src="assets/img/logos/hidden-genius-project.png" alt="The Hidden Genius Project" loading="lazy"><img src="assets/img/logos/human-rights-first.png" alt="Human Rights First" loading="lazy"><img src="assets/img/logos/jvs.png" alt="JVS" loading="lazy"><img src="assets/img/logos/les-ecology-center.png" alt="LES Ecology Center" loading="lazy"><img src="assets/img/logos/linkedin.png" alt="LinkedIn" loading="lazy"><img src="assets/img/logos/pwc.png" alt="PwC" loading="lazy"><img src="assets/img/logos/marin-community-foundation.png" alt="Marin Community Foundation" loading="lazy"><img src="assets/img/logos/morgan-stanley.png" alt="Morgan Stanley" loading="lazy"><img src="assets/img/logos/netapp.png" alt="NetApp" loading="lazy"><img src="assets/img/logos/nethope.png" alt="NetHope" loading="lazy"><img src="assets/img/logos/nten.png" alt="NTEN" loading="lazy"><img src="assets/img/logos/possibility-project.png" alt="The Possibility Project" loading="lazy"><img src="assets/img/logos/rise.png" alt="RISE" loading="lazy"><img src="assets/img/logos/sadie-nash.png" alt="Sadie Nash Leadership Project" loading="lazy"><img src="assets/img/logos/schmidt-futures.png" alt="Schmidt Futures" loading="lazy"><img src="assets/img/logos/servicenow.png" alt="ServiceNow" loading="lazy"><img src="assets/img/logos/techsoup.png" alt="TechSoup" loading="lazy"><img src="assets/img/logos/tipping-point.png" alt="Tipping Point Community" loading="lazy"><img src="assets/img/logos/world-pulse.png" alt="World Pulse" loading="lazy"><img src="assets/img/logos/youthbuild.png" alt="YouthBuild" loading="lazy"></div>
   </div>
   <p class="callout" style="margin-top:40px;font-size:1.15rem;color:var(--ink)">Through the <b>Nonprofit Tech Governance Congress</b>, Board.Dev convenes the leaders setting standards for AI decision-making in the social sector—and through our annual salon series, brings together nonprofit CEOs, funders, and corporate leaders to design the board nonprofits need now.</p>
   <p style="text-align:center;margin-top:20px"><a class="btn btn-navy" href="about-us.html">Learn more</a></p>
@@ -131,9 +136,9 @@ pages["index.html"] = dict(title="Board.Dev", desc="Board.Dev builds the boards 
   <div class="band" style="border-radius:var(--radius);padding:36px 28px">
     <h2 style="text-align:center;font-size:1.5rem;font-weight:500;margin-bottom:24px">See how board service builds leaders and impact</h2>
     <div class="videos">
-      <a class="video" href="https://www.youtube.com/@boarddev" target="_blank" rel="noopener"><div class="thumb"></div><div class="cap">Arnab Bose<small>Asana, CPO</small></div></a>
-      <a class="video" href="https://www.youtube.com/@boarddev" target="_blank" rel="noopener"><div class="thumb"></div><div class="cap">Erin Baudo Felter<small>Okta, VP Global Impact</small></div></a>
-      <a class="video" href="https://www.youtube.com/@boarddev" target="_blank" rel="noopener"><div class="thumb"></div><div class="cap">Susi Hajeski<small>CDW, Head of Cybersecurity</small></div></a>
+      <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose<small>Asana, CPO</small></div></a>
+      <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter<small>Okta, VP Global Impact</small></div></a>
+      <a class="video" href="https://www.youtube.com/watch?v=N85-_qqMywg" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/N85-_qqMywg/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Susi Hajeski<small>CDW, Head of Cybersecurity</small></div></a>
     </div>
   </div>
 </div></section>
@@ -181,8 +186,8 @@ pages["what-we-do.html"] = dict(title="What We Do — Board.Dev", desc="How Boar
 <section class="section"><div class="wrap">
   <h2 style="text-align:center;font-size:1.6rem;font-weight:500;margin-bottom:24px">Corporate Leader Perspectives</h2>
   <div class="videos two-up">
-    <a class="video" href="https://www.youtube.com/@boarddev" target="_blank" rel="noopener"><div class="thumb"></div><div class="cap">Arnab Bose (Asana CPO) on how board service shaped his leadership</div></a>
-    <a class="video" href="https://www.youtube.com/@boarddev" target="_blank" rel="noopener"><div class="thumb"></div><div class="cap">Erin Baudo Felter (Okta) on why board service is a unique lever for social impact</div></a>
+    <a class="video" href="https://www.youtube.com/watch?v=L19EyN38Qh4" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/L19EyN38Qh4/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Arnab Bose (Asana CPO) on how board service shaped his leadership</div></a>
+    <a class="video" href="https://www.youtube.com/watch?v=na8TBGlQo4A" target="_blank" rel="noopener"><div class="thumb"><img src="https://img.youtube.com/vi/na8TBGlQo4A/hqdefault.jpg" alt="" loading="lazy"></div><div class="cap">Erin Baudo Felter (Okta) on why board service is a unique lever for social impact</div></a>
   </div>
 </div></section>
 
@@ -203,20 +208,20 @@ pages["what-we-do.html"] = dict(title="What We Do — Board.Dev", desc="How Boar
 
 # ---------- RESOURCES ----------
 res = [
- ("Building the Board We Need Now: SF Dispatch","A new co-publication of Board.Dev and Dell Technologies based on a national nonprofit survey—a hard look at why the sector is stuck and what leadership teams can do about it.","Photo: salon roundtable"),
- ("Building the Leadership Nonprofits Need to Make AI Work.","A new co-publication of Board.Dev and Dell Technologies based on a national nonprofit survey—a hard look at why the sector is stuck and what leadership teams can do about it.","Photo: panel discussion"),
- ("Interview Guide: Tech Board Candidates","A practical, structured tool to help you lead more effective interviews with prospective tech board members. It covers four key areas: experience and skills, approach, motivation and fit, and expectations. Download the guide to strengthen your board recruitment process.","Photo: interview"),
- ("Tech Board Role Description Template","Need a board member with tech expertise? Use this editable template to quickly draft and post a compelling role description that attracts the right candidates.","Photo: laptop"),
- ("Guide: Finding Board Members","Our free guide walks you through all the steps you'll need to find and recruit potential board members via LinkedIn, using your greatest resource: your current board members.","Photo: LinkedIn"),
- ("Board Brief: AI Adoption + Policy","A 3-month action plan to help nonprofit boards lead on AI strategy, policy, and ethics. This brief offers practical guidance, key questions, and concrete steps to support human-centered, mission-aligned AI adoption without requiring boards to be tech experts. Use it to set values-based guardrails, boost tech fluency, and make confident decisions.","Photo: AI chip"),
- ("The Tech Governance Playbook","Our free Tech Governance Playbook provides everything you need to know about how nonprofits leverage tech executives to maximize their impact. Download now to learn how you can start making change right now.","Photo: boardroom"),
- ("The Tech 28","A set of 28 essential questions to help nonprofit boards and CEOs start strategic conversations about technology, risk, and innovation. Use The Tech 28 to align your board, strengthen decision-making, and make tech a core part of your organization's mission and impact.","Photo: planning"),
+ ("Building the Board We Need Now: SF Dispatch","What can my board do that AI can't? Thirty nonprofit CEOs, funders, and board chairs spent an afternoon in San Francisco on that question. The first dispatch from our 2026 field research, with Okta and AWS.","sf-dispatch","assets/pdfs/board-dev-sf-dispatch.pdf","Read the dispatch"),
+ ("Building the Leadership Nonprofits Need to Make AI Work.","A new co-publication of Board.Dev and Dell Technologies based on a national nonprofit survey—a hard look at why the sector is stuck and what leadership teams can do about it.","dell-report","assets/pdfs/board-dev-dell-building-the-leadership-nonprofits-need-to-make-ai-work.pdf","Read the report"),
+ ("Interview Guide: Tech Board Candidates","A practical, structured tool to help you lead more effective interviews with prospective tech board members. It covers four key areas: experience and skills, approach, motivation and fit, and expectations. Download the guide to strengthen your board recruitment process.","interview-guide","assets/pdfs/board-dev-interview-guide-tech-board-candidates.pdf","Download"),
+ ("Tech Board Role Description Template","Need a board member with tech expertise? Use this editable template to quickly draft and post a compelling role description that attracts the right candidates.","role-description-template","https://docs.google.com/document/d/1CWvjTivdMP-jFOL0KP4ij-6rtfyzHsmG4s0OD3V4Yc0/edit","Open template"),
+ ("Guide: Finding Board Members","Our free guide walks you through all the steps you'll need to find and recruit potential board members via LinkedIn, using your greatest resource: your current board members.","finding-board-members","assets/pdfs/board-dev-guide-finding-board-members-linkedin.pdf","Download"),
+ ("Board Brief: AI Adoption + Policy","A 3-month action plan to help nonprofit boards lead on AI strategy, policy, and ethics. This brief offers practical guidance, key questions, and concrete steps to support human-centered, mission-aligned AI adoption without requiring boards to be tech experts. Use it to set values-based guardrails, boost tech fluency, and make confident decisions.","board-brief-ai","assets/pdfs/board-dev-board-brief-ai-adoption-policy.pdf","Download"),
+ ("The Tech Governance Playbook","Our free Tech Governance Playbook provides everything you need to know about how nonprofits leverage tech executives to maximize their impact. Download now to learn how you can start making change right now.","tech-governance-playbook","assets/pdfs/board-dev-tech-governance-playbook.pdf","Download"),
+ ("The Tech 28","A set of 28 essential questions to help nonprofit boards and CEOs start strategic conversations about technology, risk, and innovation. Use The Tech 28 to align your board, strengthen decision-making, and make tech a core part of your organization's mission and impact.","tech-28","assets/pdfs/board-dev-the-tech-28.pdf","Download"),
 ]
 cards = "".join(f"""
     <article class="res">
-      <div class="body"><h3>{t}</h3><p>{d}</p><a class="btn btn-ghost" href="get-in-touch.html">Download</a></div>
-      <div class="ph">{ph}</div>
-    </article>""" for t,d,ph in res)
+      <div class="body"><h3>{t}</h3><p>{d}</p><a class="btn btn-ghost" href="{href}" target="_blank" rel="noopener">{cta}</a></div>
+      <div class="ph"><img src="assets/img/resources/{img}.jpg" alt="" loading="lazy"></div>
+    </article>""" for t,d,img,href,cta in res)
 pages["resources.html"] = dict(title="Resources — Board.Dev", desc="Free tools to help nonprofit leaders, funders, and partners build tech fluency and strategic capacity.", active=2, body=f"""
 <section class="section"><div class="wrap">
   <div class="page-title">
@@ -237,8 +242,8 @@ members = [("Alvina Antar","Chief Digital Officer, F5"),("Amy Sample Ward","CEO,
 ("Kevin Barenblat","Co-founder & President, Fast Forward"),("Kristen Swanson","Member of Technical Staff, Anthropic"),("Mike Belinsky","Civil Society & Philanthropy, OpenAI Foundation"),
 ("Nate Wong","Partner, Bridgespan Group"),("Oliver Hurst-Hiller","Board of Directors, Fast Forward"),("Sajit Joseph","CTO, Risepoint"),
 ("Satwik Seshasai","Executive in Residence, Inovia Capital"),("Tara Huffman","Chief Program and Strategy Officer, BoardSource"),("Alex Diaz","Head of AI for Social Good, Google"),("Nabiha Syed","ED, Mozilla Foundation")]
-def initials(n): return "".join(p[0] for p in n.split()[:2])
-mem = "".join(f'<div class="member"><div class="avatar sm">{initials(n)}</div><b>{n}</b><small>{r}</small></div>' for n,r in members)
+def slugify(n): return re.sub(r"[^a-z0-9]+","-",n.lower()).strip("-")
+mem = "".join(f'<div class="member"><div class="avatar sm"><img src="assets/img/team/{slugify(n)}.jpg" alt="{n}" loading="lazy"></div><b>{n}</b><small>{r}</small></div>' for n,r in members)
 pages["about-us.html"] = dict(title="About — Board.Dev", desc="The founding team and the Nonprofit Tech Governance Congress behind Board.Dev.", active=3, body=f"""
 <section class="section"><div class="wrap">
   <div class="about-head">
@@ -249,8 +254,8 @@ pages["about-us.html"] = dict(title="About — Board.Dev", desc="The founding te
 <section class="founders"><div class="wrap">
   <h2>Founding Team</h2>
   <div class="founder-grid">
-    <div class="founder"><div class="avatar">AH</div><h3>Alethea Hannemann</h3><div class="role">Co-Founder/CEO</div><p>Built cross-sector collaborations at Taproot, Okta, Google, and Splunk. Former COO of a $25M nonprofit. Co-author of Powered by Pro Bono. Bridges tech, philanthropy, and mission leadership.</p></div>
-    <div class="founder"><div class="avatar">AH</div><h3>Aaron Hurst</h3><div class="role">Co-Founder/Advisor</div><p>Serial social entrepreneur; founded Taproot Foundation ($15B pro bono market) and Imperative (venture-backed B Corp). Advisor to LinkedIn and longtime board member. Author of Powered by Pro Bono and The Purpose Economy.</p></div>
+    <div class="founder"><div class="avatar"><img src="assets/img/team/alethea-hannemann.jpg" alt="Alethea Hannemann"></div><h3>Alethea Hannemann</h3><div class="role">Co-Founder/CEO</div><p>Built cross-sector collaborations at Taproot, Okta, Google, and Splunk. Former COO of a $25M nonprofit. Co-author of Powered by Pro Bono. Bridges tech, philanthropy, and mission leadership.</p></div>
+    <div class="founder"><div class="avatar"><img src="assets/img/team/aaron-hurst.jpg" alt="Aaron Hurst"></div><h3>Aaron Hurst</h3><div class="role">Co-Founder/Advisor</div><p>Serial social entrepreneur; founded Taproot Foundation ($15B pro bono market) and Imperative (venture-backed B Corp). Advisor to LinkedIn and longtime board member. Author of Powered by Pro Bono and The Purpose Economy.</p></div>
   </div>
 </div></section>
 <section class="section"><div class="wrap">
@@ -266,7 +271,7 @@ pages["about-us.html"] = dict(title="About — Board.Dev", desc="The founding te
     <p>Featured in</p>
     <div class="logos"><span>Stanford Social Innovation Review</span><span>The Chronicle of Philanthropy</span><span>Tech Policy Press</span></div>
   </div>
-  <div class="gallery" aria-label="Event photo gallery">{"".join("<div></div>" for _ in range(12))}</div>
+  <div class="gallery" aria-label="Event photo gallery"><img src="assets/img/events/event-01.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-02.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-03.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-04.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-05.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-06.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-07.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-08.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-09.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-10.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-11.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-12.jpg" alt="Board.Dev event photo" loading="lazy"><img src="assets/img/events/event-13.jpg" alt="Board.Dev event photo" loading="lazy"></div>
   <p class="tagline">Tech-ready boards.<br>Mission-ready nonprofits.</p>
 </div></section>
 {NEWSLETTER}
@@ -276,33 +281,54 @@ pages["about-us.html"] = dict(title="About — Board.Dev", desc="The founding te
 pages["get-in-touch.html"] = dict(title="Get in touch — Board.Dev", desc="Contact Board.Dev.", active=-1, body="""
 <section class="section band" style="min-height:70vh"><div class="wrap">
   <h1 style="text-align:center;font-size:1.7rem;font-weight:500;margin-bottom:28px">Get in touch</h1>
-  <form class="form-card" id="contact" onsubmit="event.preventDefault();document.getElementById('thanks').hidden=false;this.reset()">
-    <div class="row">
-      <div><label for="fn">First Name<i>*</i></label><input id="fn" name="firstname" required></div>
-      <div><label for="ln">Last Name<i>*</i></label><input id="ln" name="lastname" required></div>
-    </div>
-    <label for="em">Email<i>*</i></label><input id="em" name="email" type="email" required>
-    <label for="org">Organization</label><input id="org" name="company">
-    <label for="loc">Location<i>*</i></label>
-    <select id="loc" name="location" required><option value="">Please Select</option><option>United States</option><option>Canada</option><option>Other</option></select>
-    <label for="role">Professional role or function<i>*</i></label>
-    <select id="role" name="role" required><option value="">Please Select</option><option>Nonprofit executive</option><option>Board member</option><option>Funder</option><option>Corporate leader</option><option>Other</option></select>
-    <label for="int">I am interested in:<i>*</i></label>
-    <select id="int" name="interest" required><option value="">Please Select</option><option>Board tech fluency training</option><option>Board service for my team</option><option>Partnering as a company</option><option>Funding this work</option><option>Resources and newsletter</option></select>
-    <p class="legal">Board.Dev is committed to protecting and respecting your privacy. From time to time, we would like to contact you about new events, resources and other content that may be of interest to you. You can unsubscribe from these communications at any time. If you consent to us contacting you for this purpose, please check the box below:</p>
-    <label class="consent"><input type="checkbox" id="consent" name="consent"> I agree to receive marketing communications from Board.Dev.</label>
-    <p class="legal">By clicking submit below, you consent to allow Board.Dev to store and process the personal information submitted above to provide you the content requested.</p>
-    <button class="submit" type="submit">Submit</button>
-    <p id="thanks" hidden style="text-align:center;color:var(--navy);margin-top:14px;font-weight:600">Thanks — we'll be in touch.</p>
-  </form>
-  <p class="form-note">V1 note: this form will be replaced by the live HubSpot embed.</p>
+  <div class="form-card hs-form" id="contact-form"></div>
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+  <script>hbspt.forms.create({portalId:"45089564",formId:"e7e9d42a-2db1-42a0-ac6c-a5b3f6a86a66",region:"na1",target:"#contact-form"});</script>
 </div></section>
 """)
 
 pages["privacy-policy.html"] = dict(title="Privacy Policy — Board.Dev", desc="Board.Dev privacy policy.", active=-1, body="""
 <section class="section"><div class="wrap prose" style="max-width:720px">
-  <h1 style="font-size:1.7rem;font-weight:500">Privacy Policy</h1>
-  <p>Placeholder for the existing Board.Dev privacy policy text. Paste the current policy here before launch.</p>
+  <h1 style="font-size:1.7rem;font-weight:500">Board.Dev Privacy Policy</h1>
+  <p class="eyebrow" style="margin-top:8px">Last updated: August 20, 2026</p>
+  <p>Board.Dev connects tech-fluent leaders with nonprofit boards and delivers AI leadership programs for nonprofits and corporate partners. This policy explains what information we collect, how we use it, and who we share it with.</p>
+  <h2>1. Information we collect</h2>
+  <p>We collect information when you fill out a form on our site, apply to be considered for a board placement, register for an event or program, subscribe to our emails, respond to a survey, or contact us directly.</p>
+  <p>Depending on how you interact with us, this may include your name, email address, phone number, employer, job title, professional background and experience, board service history, areas of interest, geographic location, and any other information you choose to provide.</p>
+  <p>We also collect technical information automatically when you visit our website, including browser type, device, pages visited, and general usage patterns.</p>
+  <h2>2. How we use your information</h2>
+  <p>We use your information to evaluate and match candidates with nonprofit board opportunities, deliver programs and events you have registered for, respond to your questions, send updates and invitations, and improve our services and content.</p>
+  <h2>3. Board placement candidates</h2>
+  <p>If you apply or are nominated for a board placement, we assess your background and experience to identify nonprofit organizations where you may be a strong fit. As part of that process, we share your professional profile and relevant application materials with nonprofit organizations we believe are a match, so they can decide whether to interview you.</p>
+  <p>We use software tools, including AI-assisted systems, to help organize and evaluate candidate information. All matching recommendations are reviewed by a person before we share your information with any organization.</p>
+  <p>If your participation is sponsored by your employer, we share your enrollment status, participation, and placement outcome with that employer. We do not share the substance of your individual application materials, interview feedback, or personal information beyond what is necessary to report on the program. In some programs your employer participates in the matching process and also sees the information you provide in your application.</p>
+  <h2>4. Nonprofit organizations</h2>
+  <p>If your organization applies for a board placement or participates in one of our programs, we collect information about your organization, its board, its technology and AI practices, and the people we work with. We share relevant portions with candidates so they can evaluate the opportunity, and with the corporate partner sponsoring the program in aggregate or summary form.</p>
+  <h2>5. Research and publications</h2>
+  <p>We conduct research on nonprofit boards and AI adoption, sometimes with partners. If you participate in a survey or interview, we tell you at the time how the information will be used. We report research findings in aggregate and do not identify individuals or organizations in publications without permission.</p>
+  <h2>6. Sharing your information</h2>
+  <p>We do not sell your personal information.</p>
+  <p>We share information with nonprofit organizations and corporate partners as described above, and with service providers who help us operate, including email, analytics, and customer relationship management platforms, including Google Analytics and HubSpot, and AI platforms including Anthropic's Claude API. These providers may only use the information to provide services to us.</p>
+  <p>We may disclose information if required by law, or to protect our rights or the safety of others.</p>
+  <h2>7. How long we keep information</h2>
+  <p>We keep candidate information for as long as you may be interested in board service, so we can contact you about future opportunities. We keep program and event records as long as we need them for our operations and any reporting obligations. You can ask us to delete your information at any time.</p>
+  <h2>8. Cookies</h2>
+  <p>We use cookies and similar technologies to understand how people use our site and to improve it. You can control cookies through your browser settings.</p>
+  <h2>9. Data security</h2>
+  <p>We take reasonable measures to protect your information. No system is completely secure, and we cannot guarantee absolute security.</p>
+  <h2>10. Your choices and rights</h2>
+  <p>You can unsubscribe from our emails at any time using the link in any message. You can ask us to access, correct, or delete the information we hold about you, ask us to stop sharing your profile with organizations, or withdraw your consent to future communications.</p>
+  <p>Depending on where you live, you may have additional rights, including the right to know what personal information we collect and how we use it, the right to request deletion, the right to correct inaccurate information, and the right not to be discriminated against for exercising these rights. If you are in the European Economic Area or the United Kingdom, you also have the right to object to or restrict processing, the right to data portability, and the right to lodge a complaint with your local data protection authority. Where we process your information, we do so because you have consented, because it is necessary to provide a service you requested, or because we have a legitimate interest in operating our programs.</p>
+  <p>To exercise any of these rights, email us at <a href="mailto:info@board.dev">info@board.dev</a>.</p>
+  <h2>11. International transfers</h2>
+  <p>We operate in the United States, and information we collect is stored and processed there. If you are outside the United States, you understand your information will be transferred to and processed in the United States.</p>
+  <h2>12. Children</h2>
+  <p>Our services are for adults. We do not knowingly collect information from anyone under 16. If you believe a child has provided us information, contact us and we will delete it.</p>
+  <h2>13. Changes</h2>
+  <p>We may update this policy. Changes will be posted here with a new date.</p>
+  <h2>14. Contact</h2>
+  <p>Board.Dev<br><a href="mailto:info@board.dev">info@board.dev</a><br><a href="https://www.board.dev">https://www.board.dev</a></p>
+
 </div></section>
 """)
 
@@ -312,14 +338,5 @@ for name, p in pages.items():
     html = HEAD.format(title=p["title"],desc=p["desc"]) + nav + p["body"] + FOOT
     (root/name).write_text(html)
 
-# artifact copy of index: no doctype/html/head/body wrappers
-idx = (root/"index.html").read_text()
-m = re.search(r"<head>(.*?)</head>\s*<body>(.*)</body>", idx, re.S)
-head_inner = re.sub(r'<meta (charset|name="viewport")[^>]*>\n?', "", m.group(1))
-head_inner = re.sub(r'<link[^>]*preconnect[^>]*>\n?', "", head_inner)
-art = '<meta name="claude:viewport-fit-sides" content="cover">\n' + head_inner.strip() + "\n" + m.group(2)
-pathlib.Path("/home/claude/boarddev-artifact").mkdir(exist_ok=True)
-pathlib.Path("/home/claude/boarddev-artifact/index.html").write_text(art)
-(root/"CNAME").write_text("board.dev\n")
-(root/"README.md").write_text("# Board.Dev — static site\n\nPlain HTML/CSS, no build step. Edit the `.html` files directly, or edit `build.py` (the page source of truth) and run `python3 build.py` to regenerate.\n\nDeploy: GitHub Pages from `main`, custom domain `board.dev` (see `CNAME`).\n")
+(root/"README.md").write_text("# Board.Dev — static site\n\nPlain HTML/CSS, no build step. `build.py` is the source of truth for page content: edit it and run `python3 build.py` to regenerate the `.html` files.\n\n- `assets/img/` — processed images (logo, team headshots, partner logos, resource cards)\n- `assets/pdfs/` — downloadable resources\n- `_source/` — original uploaded assets (not committed)\n\nForms are HubSpot embeds (contact + newsletter). Video thumbnails load from YouTube.\n\nDeploy: GitHub Pages from `main`. Custom domain `board.dev` is enabled by adding a `CNAME` file containing `board.dev` and pointing GoDaddy DNS at GitHub Pages.\n")
 print("built", list(pages))
