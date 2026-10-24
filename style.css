@@ -223,6 +223,22 @@ h2{font-size:24px}
 /* What We Do / long-form text: bigger and centred */
 .prose{max-width:860px;margin-left:auto;margin-right:auto}
 .prose h2{font-size:28px;margin-top:36px}
-.prose p{font-size:20px;line-height:1.6;max-width:none;margin-top:14px}
-.prose p.lead{font-size:22px}
+.prose p{font-size:18px;line-height:1.6;max-width:none;margin-top:14px}
+.prose p.lead{font-size:20px}
 @media (max-width:600px){.prose h2{font-size:24px}.prose p{font-size:18px}.prose p.lead{font-size:19px}}
+/* type audit: nothing below 16px except small labels */
+.hero p{font-size:18px}
+.hero.compact p{font-size:21px}
+.callout p,.two p,.three p,.quote-card p,.quote-card cite{font-size:18px}
+.two h3,.three h3{font-size:22px}
+.video .cap{font-size:17px}.video .cap small{font-size:15px}
+.stat small{font-size:16px}
+.about-head p{font-size:20px}
+.founder .role{font-size:18px}
+.founder p{font-size:17px;max-width:52ch}
+.member b{font-size:19px}.member small{font-size:16px}
+.congress p,.members p{font-size:18px}
+.page-title p{font-size:19px}
+.eyebrow{font-size:14px}
+footer p{font-size:16px}footer ul{font-size:17px}
+.btn-navy,.btn-light{font-size:16px}
