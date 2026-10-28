@@ -389,6 +389,7 @@ ROUTES = {
 REDIRECTS = {
     "/join-form/":  "/get-in-touch/",
     "/newsletter/": "/newsletter-sign-up/",
+    "/june-blueprint/": "/assets/pdfs/board-dev-sf-dispatch.pdf",
 }
 
 def rootify(html):
