@@ -1,6 +1,9 @@
 import pathlib, re
 root = pathlib.Path(__file__).parent
 
+import hashlib
+CSSV = hashlib.md5((pathlib.Path(__file__).parent/"style.css").read_bytes()).hexdigest()[:8]
+
 HEAD = """<!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@ HEAD = """<!doctype html>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={cssv}">
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXGZ3Y4XRG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-MXGZ3Y4XRG');</script>
@@ -472,7 +475,7 @@ def rootify(html):
     for name, route in ROUTES.items():
         html = html.replace(f'href="{name}"', f'href="{route}"')
     html = re.sub(r'(href|src|poster)="(assets/)', r'\1="/\2', html)
-    html = html.replace('href="style.css"', 'href="/style.css"')
+    html = html.replace('href="style.css?', 'href="/style.css?')
     return html
 
 def out_path(route):
@@ -482,7 +485,7 @@ for name, p in pages.items():
     route = ROUTES[name]
     act = {i:(' class="active"' if p["active"]==i else "") for i in (1,2,3)}
     nav = NAV.format(a1=act[1],a2=act[2],a3=act[3])
-    head = HEAD.format(title=p["title"],desc=p["desc"]).replace(
+    head = HEAD.format(title=p["title"],desc=p["desc"],cssv=CSSV).replace(
         "</head>", f'<link rel="canonical" href="{SITE}{route}">\n</head>')
     html = rootify(head + nav + p["body"] + FOOT)
     dest = out_path(route)
@@ -506,7 +509,7 @@ for frm, to in REDIRECTS.items():
 
 # 404 page (GitHub Pages serves /404.html for any missing URL)
 nav404 = NAV.format(a1="",a2="",a3="")
-html404 = HEAD.format(title="Page not found — Board.Dev", desc="Page not found.") + nav404 + """
+html404 = HEAD.format(title="Page not found — Board.Dev", desc="Page not found.", cssv=CSSV) + nav404 + """
 <section class="section"><div class="wrap">
   <h1>Page not found</h1>
   <p>That page doesn't exist or has moved. Try the <a href="/">homepage</a>, <a href="/resources/">Resources</a>, or <a href="/get-in-touch/">get in touch</a>.</p>
