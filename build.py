@@ -375,30 +375,30 @@ pages["privacy-policy.html"] = dict(title="Privacy Policy — Board.Dev", desc="
 """)
 
 
-# ---------- SALON RECAP: SAN FRANCISCO ----------
-# Self-hosted clips (no YouTube, no third-party script). Drop files in assets/video/ and list them here.
-SF_VIDEOS = [
- ("sf-01","What can a board do that AI can't?","Buddy Shah (Clinton Health Access Initiative) with Charlotte Wylie (Okta)"),
- ("sf-02","Building a tech-fluent board","Hilary Noon, AWS, with Michael Lissner, Free Law Project"),
- ("sf-03","Ways to support nonprofits","Victor Cordon, Okta"),
-]
-sf_vids = "".join(f"""
+# ---------- SALON RECAPS ----------
+# One hub per city. Clips are self-hosted (native <video>, no YouTube, no third-party script):
+# drop sf-01.mp4 + sf-01.jpg etc. into assets/video/ and list them in the city's videos.
+def clip_cards(videos):
+    return "".join(f"""
       <figure class="clip">
         <video controls preload="metadata" playsinline poster="assets/video/{f}.jpg"><source src="assets/video/{f}.mp4" type="video/mp4">Your browser can't play this video. <a href="assets/video/{f}.mp4">Download it</a> instead.</video>
         <figcaption><b>{t}</b><small>{c}</small></figcaption>
-      </figure>""" for f,t,c in SF_VIDEOS)
-pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", desc="What can a board do that AI can't? Thirty nonprofit CEOs, funders, and board chairs spent an afternoon in San Francisco on that question. Highlights from the first stop of the 2026 Salon Series with Okta and AWS.", active=-1, body=f"""
+      </figure>""" for f,t,c in videos)
+
+def salon_page(*, eyebrow, h1, lede, videos, stage_h, stage_p, built_h, built_p, cta_h, cta_p, cta_href, cta_label, partners_p, partners):
+    logos = "".join(f'<img src="assets/img/logos/{f}" alt="{a}" loading="lazy">' for f,a in partners)
+    return f"""
 <section class="section" style="padding-top:24px"><div class="wrap">
   <div class="hero compact">
-    <p class="eyebrow" style="color:#dfe3f3">2026 Salon Series · San Francisco · June 8</p>
-    <h1>What can a board do that AI can't?</h1>
-    <p>Thirty nonprofit CEOs, funders, and board chairs spent an afternoon on that question. The first stop of Building the Board Nonprofits Need Now, presented by Board.Dev and Okta.</p>
+    <p class="eyebrow" style="color:#dfe3f3">{eyebrow}</p>
+    <h1>{h1}</h1>
+    <p>{lede}</p>
   </div>
 </div></section>
 
 <section class="section" style="padding-top:0"><div class="wrap">
   <h2 style="text-align:center;font-weight:500;margin-bottom:24px">Watch the highlights</h2>
-  <div class="clips">{sf_vids}
+  <div class="clips">{clip_cards(videos)}
   </div>
 </div></section>
 
@@ -406,13 +406,13 @@ pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", 
   <div class="two" style="text-align:left">
     <div>
       <p class="eyebrow">On stage</p>
-      <h3>Three conversations, one question</h3>
-      <p>Buddy Shah, CEO of the Clinton Health Access Initiative and chair of Anthropic's Long-Term Benefit Trust, opened the series with Charlotte Wylie of Okta. Hilary Noon of AWS and Michael Lissner of Free Law Project took on what a tech-fluent board looks like in practice. Victor Cordon of Okta closed with how companies can show up for nonprofits.</p>
+      <h3>{stage_h}</h3>
+      <p>{stage_p}</p>
     </div>
     <div>
       <p class="eyebrow">What we built</p>
-      <h3>Two questions and ten mandates</h3>
-      <p>San Francisco surfaced the two questions the whole series now runs on: what can a board do that AI can't, and how do we finally build the board we've needed for decades? The room drafted ten mandates to answer them. New York pressure-tested those mandates. Chicago extended them.</p>
+      <h3>{built_h}</h3>
+      <p>{built_p}</p>
     </div>
   </div>
 </div></section>
@@ -428,9 +428,9 @@ pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", 
 <section class="section band"><div class="wrap">
   <div class="two">
     <div>
-      <h3>Read the June dispatch</h3>
-      <p>Everything the San Francisco room built, in one brief.</p>
-      <a class="btn btn-navy" href="assets/pdfs/board-dev-sf-dispatch.pdf" target="_blank" rel="noopener">Read the dispatch</a>
+      <h3>{cta_h}</h3>
+      <p>{cta_p}</p>
+      <a class="btn btn-navy" href="{cta_href}" target="_blank" rel="noopener">{cta_label}</a>
     </div>
     <div>
       <h3>The full blueprint lands in January 2027</h3>
@@ -442,11 +442,49 @@ pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", 
 
 <section class="section"><div class="wrap">
   <div class="featured-in">
-    <p>With thanks to our San Francisco partners</p>
-    <div class="press"><img src="assets/img/logos/okta.png" alt="Okta, presenting partner and working session host" loading="lazy"><img src="assets/img/logos/aws.png" alt="Amazon Web Services, reception host" loading="lazy"></div>
+    <p>{partners_p}</p>
+    <div class="press">{logos}</div>
   </div>
 </div></section>
-""")
+"""
+
+pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", desc="What can a board do that AI can't? Thirty nonprofit CEOs, funders, and board chairs spent an afternoon in San Francisco on that question. Highlights from the first stop of the 2026 Salon Series with Okta and AWS.", active=-1, body=salon_page(
+  eyebrow="2026 Salon Series · San Francisco · June 8",
+  h1="What can a board do that AI can't?",
+  lede="Thirty nonprofit CEOs, funders, and board chairs spent an afternoon on that question. The first stop of Building the Board Nonprofits Need Now, presented by Board.Dev and Okta.",
+  videos=[
+   ("sf-01","What can a board do that AI can't?","Buddy Shah (Clinton Health Access Initiative) with Charlotte Wylie (Okta)"),
+   ("sf-02","Building a tech-fluent board","Hilary Noon, AWS, with Michael Lissner, Free Law Project"),
+   ("sf-03","Ways to support nonprofits","Victor Cordon, Okta"),
+  ],
+  stage_h="Three conversations, one question",
+  stage_p="Buddy Shah, CEO of the Clinton Health Access Initiative and chair of Anthropic's Long-Term Benefit Trust, opened the series with Charlotte Wylie of Okta. Hilary Noon of AWS and Michael Lissner of Free Law Project took on what a tech-fluent board looks like in practice. Victor Cordon of Okta closed with how companies can show up for nonprofits.",
+  built_h="Two questions and ten mandates",
+  built_p="San Francisco surfaced the two questions the whole series now runs on: what can a board do that AI can't, and how do we finally build the board we've needed for decades? The room drafted ten mandates to answer them. New York pressure-tested those mandates. Chicago extended them.",
+  cta_h="Read the June dispatch", cta_p="Everything the San Francisco room built, in one brief.",
+  cta_href="assets/pdfs/board-dev-sf-dispatch.pdf", cta_label="Read the dispatch",
+  partners_p="With thanks to our San Francisco partners",
+  partners=[("okta.png","Okta, presenting partner and working session host"),("aws.png","Amazon Web Services, reception host")],
+))
+
+pages["salon-nyc.html"] = dict(title="Salon Recap: New York — Board.Dev", desc="Where does governance end and management begin? Nonprofit CEOs, board chairs, and funders pressure-tested the ten board mandates in New York. Highlights from the second stop of the 2026 Salon Series with Okta and the Atlassian Foundation.", active=-1, body=salon_page(
+  eyebrow="2026 Salon Series · New York · September 29",
+  h1="Where does governance end and management begin?",
+  lede="New York took the ten mandates drafted in San Francisco and put them under pressure. The second stop of Building the Board Nonprofits Need Now, presented by Board.Dev and Okta.",
+  videos=[
+   ("nyc-01","Shamina Singh with Zia Khan","Mastercard Center for Inclusive Growth"),
+   ("nyc-02","Nabiha Syed with Anil Dash","Mozilla Foundation"),
+   ("nyc-03","Erran Berger with Susan Murray","LinkedIn and Year Up United"),
+  ],
+  stage_h="Three firesides",
+  stage_p="Shamina Singh of the Mastercard Center for Inclusive Growth sat down with Zia Khan. Nabiha Syed, executive director of the Mozilla Foundation, talked with Anil Dash. Erran Berger of LinkedIn closed the evening with Susan Murray of Year Up United.",
+  built_h="The line between governance and management",
+  built_p="The working session pressure-tested the ten mandates and named the concept CEOs and board chairs most need right now: where governance ends and management begins. Chicago went on to test when that line can move, and what it takes to move it back.",
+  cta_h="Start with the June dispatch", cta_p="The two questions and ten mandates New York put to the test.",
+  cta_href="assets/pdfs/board-dev-sf-dispatch.pdf", cta_label="Read the dispatch",
+  partners_p="With thanks to our New York partners",
+  partners=[("okta.png","Okta, presenting partner and working session host"),("atlassian.png","Atlassian Foundation, reception host")],
+))
 
 # ---------- OUTPUT ----------
 # URLs must match the old WordPress permalinks exactly (/about-us/, /what-we-do/ ...)
@@ -462,6 +500,7 @@ ROUTES = {
     "newsletter.html":     "/newsletter-sign-up/",
     "privacy-policy.html": "/privacy-policy/",
     "salon-sf.html":       "/salon-recap/san-francisco/",
+    "salon-nyc.html":      "/salon-recap/new-york/",
 }
 # Old WordPress URLs that no longer have a page of their own -> where they go now.
 REDIRECTS = {
