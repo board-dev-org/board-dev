@@ -371,6 +371,80 @@ pages["privacy-policy.html"] = dict(title="Privacy Policy — Board.Dev", desc="
 </div></section>
 """)
 
+
+# ---------- SALON RECAP: SAN FRANCISCO ----------
+# Self-hosted clips (no YouTube, no third-party script). Drop files in assets/video/ and list them here.
+SF_VIDEOS = [
+ ("sf-01","What can a board do that AI can't?","Buddy Shah (Clinton Health Access Initiative) with Charlotte Wylie (Okta)"),
+ ("sf-02","Building a tech-fluent board","Hilary Noon, AWS, with Michael Lissner, Free Law Project"),
+ ("sf-03","Ways to support nonprofits","Victor Cordon, Okta"),
+]
+sf_vids = "".join(f"""
+      <figure class="clip">
+        <video controls preload="metadata" playsinline poster="assets/video/{f}.jpg"><source src="assets/video/{f}.mp4" type="video/mp4">Your browser can't play this video. <a href="assets/video/{f}.mp4">Download it</a> instead.</video>
+        <figcaption><b>{t}</b><small>{c}</small></figcaption>
+      </figure>""" for f,t,c in SF_VIDEOS)
+pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", desc="What can a board do that AI can't? Thirty nonprofit CEOs, funders, and board chairs spent an afternoon in San Francisco on that question. Highlights from the first stop of the 2026 Salon Series with Okta and AWS.", active=-1, body=f"""
+<section class="section" style="padding-top:24px"><div class="wrap">
+  <div class="hero compact">
+    <p class="eyebrow" style="color:#dfe3f3">2026 Salon Series · San Francisco · June 8</p>
+    <h1>What can a board do that AI can't?</h1>
+    <p>Thirty nonprofit CEOs, funders, and board chairs spent an afternoon on that question. The first stop of Building the Board Nonprofits Need Now, presented by Board.Dev and Okta.</p>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="wrap">
+  <h2 style="text-align:center;font-weight:500;margin-bottom:24px">Watch the highlights</h2>
+  <div class="clips">{sf_vids}
+  </div>
+</div></section>
+
+<section class="section band"><div class="wrap">
+  <div class="two" style="text-align:left">
+    <div>
+      <p class="eyebrow">On stage</p>
+      <h3>Three conversations, one question</h3>
+      <p>Buddy Shah, CEO of the Clinton Health Access Initiative and chair of Anthropic's Long-Term Benefit Trust, opened the series with Charlotte Wylie of Okta. Hilary Noon of AWS and Michael Lissner of Free Law Project took on what a tech-fluent board looks like in practice. Victor Cordon of Okta closed with how companies can show up for nonprofits.</p>
+    </div>
+    <div>
+      <p class="eyebrow">What we built</p>
+      <h3>Two questions and ten mandates</h3>
+      <p>San Francisco surfaced the two questions the whole series now runs on: what can a board do that AI can't, and how do we finally build the board we've needed for decades? The room drafted ten mandates to answer them. New York pressure-tested those mandates. Chicago extended them.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="stats">
+    <div class="stat"><div><b>3</b><small>Cities in the 2026 series</small></div></div>
+    <div class="stat"><div><b>77</b><small>Leaders in the working sessions</small></div></div>
+    <div class="stat"><div><b>190</b><small>Organizations registered</small></div></div>
+  </div>
+</div></section>
+
+<section class="section band"><div class="wrap">
+  <div class="two">
+    <div>
+      <h3>Read the June dispatch</h3>
+      <p>Everything the San Francisco room built, in one brief.</p>
+      <a class="btn btn-navy" href="assets/pdfs/board-dev-sf-dispatch.pdf" target="_blank" rel="noopener">Read the dispatch</a>
+    </div>
+    <div>
+      <h3>The full blueprint lands in January 2027</h3>
+      <p>Building the Board Nonprofits Need Now, in collaboration with The Bridgespan Group. Subscribe to get it first.</p>
+      <a class="btn btn-navy" href="newsletter.html">Subscribe</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="featured-in">
+    <p>With thanks to our San Francisco partners</p>
+    <div class="press"><img src="assets/img/logos/okta.png" alt="Okta, presenting partner and working session host" loading="lazy"><img src="assets/img/logos/aws.png" alt="Amazon Web Services, reception host" loading="lazy"></div>
+  </div>
+</div></section>
+""")
+
 # ---------- OUTPUT ----------
 # URLs must match the old WordPress permalinks exactly (/about-us/, /what-we-do/ ...)
 # so every link in past emails, Google, LinkedIn and partner sites keeps working.
@@ -384,6 +458,7 @@ ROUTES = {
     "get-in-touch.html":   "/get-in-touch/",
     "newsletter.html":     "/newsletter-sign-up/",
     "privacy-policy.html": "/privacy-policy/",
+    "salon-sf.html":       "/salon-recap/san-francisco/",
 }
 # Old WordPress URLs that no longer have a page of their own -> where they go now.
 REDIRECTS = {
@@ -396,7 +471,7 @@ def rootify(html):
     """Rewrite page-relative links to root-relative so pages work from /slug/ folders."""
     for name, route in ROUTES.items():
         html = html.replace(f'href="{name}"', f'href="{route}"')
-    html = re.sub(r'(href|src)="(assets/)', r'\1="/\2', html)
+    html = re.sub(r'(href|src|poster)="(assets/)', r'\1="/\2', html)
     html = html.replace('href="style.css"', 'href="/style.css"')
     return html
 
