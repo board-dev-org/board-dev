@@ -479,7 +479,7 @@ pages["salon-nyc.html"] = dict(title="Salon Recap: New York — Board.Dev", desc
   stage_h="Three pairings",
   stage_p="Shamina Singh of the Mastercard Center for Inclusive Growth sat down with Zia Khan, formerly of The Rockefeller Foundation, on what leadership has to decide differently for AI to reach the organizations that need it most. Nabiha Syed of the Mozilla Foundation and Anil Dash of antitech shared what the social sector needs from technology. Erran Berger of LinkedIn and Susan Murray of Year Up United discussed where that tension shows up in their own work.",
   built_h="Where governance ends and management begins",
-  built_p="The working session pressure-tested the ten mandates drafted in San Francisco and named the concept CEOs and board chairs most need right now: where governance ends and management begins today. The reception brought together people from Robin Hood, Emerson Collective, and The Bridgespan Group; Google, Deloitte, Dell, BNY, and NBCUniversal; and nonprofits including Charity Navigator, TechSoup, GlobalGiving, and the YMCA.",
+  built_p="The working session pressure-tested the ten mandates drafted in San Francisco and named the concept CEOs and board chairs most need right now: where governance ends and management begins today. In the room: leaders from Charity Navigator, Robin Hood, The Bridgespan Group, GlobalGiving, TechSoup, and Deloitte, among others.",
   cta_h="Start with the June dispatch", cta_p="The two questions and ten mandates New York put to the test.",
   cta_href="assets/pdfs/board-dev-sf-dispatch.pdf", cta_label="Read the dispatch",
   partners_p="With thanks to our New York partners",
