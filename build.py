@@ -386,7 +386,7 @@ def clip_cards(videos):
       </figure>""" for f,t,c in videos)
 
 def salon_page(*, eyebrow, h1, lede, videos, stage_h, stage_p, built_h, built_p, cta_h, cta_p, cta_href, cta_label, partners_p, partners):
-    logos = "".join(f'<img src="assets/img/logos/{f}" alt="{a}" loading="lazy">' for f,a in partners)
+    logos = "".join(f'<img src="assets/img/logos/{t[0]}" alt="{t[1]}"{" class=\"badge\"" if len(t)>2 else ""} loading="lazy">' for t in partners)
     return f"""
 <section class="section" style="padding-top:24px"><div class="wrap">
   <div class="hero compact">
@@ -467,23 +467,23 @@ pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", 
   partners=[("okta.png","Okta, presenting partner and working session host"),("aws.png","Amazon Web Services, reception host")],
 ))
 
-pages["salon-nyc.html"] = dict(title="Salon Recap: New York — Board.Dev", desc="Where does governance end and management begin? Nonprofit CEOs, board chairs, and funders pressure-tested the ten board mandates in New York. Highlights from the second stop of the 2026 Salon Series with Okta and the Atlassian Foundation.", active=-1, body=salon_page(
+pages["salon-nyc.html"] = dict(title="Salon Recap: New York — Board.Dev", desc="What's our job now? Thirty people working at the intersection of nonprofits, AI, and funding spent an afternoon in New York on what a board needs to be able to do now. Highlights from the second stop of the 2026 Salon Series with Okta and the Atlassian Foundation.", active=-1, body=salon_page(
   eyebrow="2026 Salon Series · New York · September 29",
-  h1="Where does governance end and management begin?",
-  lede="New York took the ten mandates drafted in San Francisco and put them under pressure. The second stop of Building the Board Nonprofits Need Now, presented by Board.Dev and Okta.",
+  h1="What's our job now?",
+  lede="Thirty people working at the intersection of nonprofits, AI, and funding spent an afternoon on a single question: what a nonprofit board needs to be able to do now, when every organization is being forced to reinvent and most boards weren't built for it. The second stop of Building the Board Nonprofits Need Now, presented by Board.Dev and Okta with the Atlassian Foundation.",
   videos=[
-   ("nyc-01","Shamina Singh with Zia Khan","Mastercard Center for Inclusive Growth"),
-   ("nyc-02","Nabiha Syed with Anil Dash","Mozilla Foundation"),
-   ("nyc-03","Erran Berger with Susan Murray","LinkedIn and Year Up United"),
+   ("nyc-01","Shamina Singh with Zia Khan","Mastercard Center for Inclusive Growth; formerly of The Rockefeller Foundation. What leadership has to decide differently for AI to reach the organizations that need it most."),
+   ("nyc-02","Nabiha Syed with Anil Dash","Mozilla Foundation; antitech. What the social sector needs from technology."),
+   ("nyc-03","Erran Berger with Susan Murray","LinkedIn; Year Up United. Where that tension shows up in their own work."),
   ],
-  stage_h="Three firesides",
-  stage_p="Shamina Singh of the Mastercard Center for Inclusive Growth sat down with Zia Khan. Nabiha Syed, executive director of the Mozilla Foundation, talked with Anil Dash. Erran Berger of LinkedIn closed the evening with Susan Murray of Year Up United.",
-  built_h="The line between governance and management",
-  built_p="The working session pressure-tested the ten mandates and named the concept CEOs and board chairs most need right now: where governance ends and management begins. Chicago went on to test when that line can move, and what it takes to move it back.",
+  stage_h="Three pairings",
+  stage_p="Shamina Singh of the Mastercard Center for Inclusive Growth sat down with Zia Khan, formerly of The Rockefeller Foundation, on what leadership has to decide differently for AI to reach the organizations that need it most. Nabiha Syed of the Mozilla Foundation and Anil Dash of antitech shared what the social sector needs from technology. Erran Berger of LinkedIn and Susan Murray of Year Up United discussed where that tension shows up in their own work.",
+  built_h="Where governance ends and management begins",
+  built_p="The working session pressure-tested the ten mandates drafted in San Francisco and named the concept CEOs and board chairs most need right now: where governance ends and management begins today. In the room: leaders from Charity Navigator, Robin Hood, The Bridgespan Group, GlobalGiving, TechSoup, and Deloitte, among others.",
   cta_h="Start with the June dispatch", cta_p="The two questions and ten mandates New York put to the test.",
   cta_href="assets/pdfs/board-dev-sf-dispatch.pdf", cta_label="Read the dispatch",
   partners_p="With thanks to our New York partners",
-  partners=[("okta.png","Okta, presenting partner and working session host"),("atlassian.png","Atlassian Foundation, reception host")],
+  partners=[("okta.png","Okta, presenting partner and working session host"),("atlassian-foundation.png","Atlassian Foundation, reception host","badge")],
 ))
 
 # ---------- OUTPUT ----------
