@@ -376,8 +376,8 @@ pages["privacy-policy.html"] = dict(title="Privacy Policy — Board.Dev", desc="
 # Self-hosted clips (no YouTube, no third-party script). Drop files in assets/video/ and list them here.
 SF_VIDEOS = [
  ("sf-01","What can a board do that AI can't?","Neil Buddy Shah, Clinton Health Access Initiative, with Charlotte Wylie, Okta"),
- ("sf-02","The board we've needed for decades","Fireside, continued"),
- ("sf-03","From the working session","Drafting the ten mandates"),
+ ("sf-02","Building a tech-fluent board","Hilary Noon, AWS, with Michael Lissner, Free Law Project"),
+ ("sf-03","Ways to support nonprofits","Victor Cordon, Okta"),
 ]
 sf_vids = "".join(f"""
       <figure class="clip">
@@ -403,8 +403,8 @@ pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", 
   <div class="two" style="text-align:left">
     <div>
       <p class="eyebrow">On stage</p>
-      <h3>Neil Buddy Shah with Charlotte Wylie</h3>
-      <p>Neil Buddy Shah chairs Anthropic's Long-Term Benefit Trust and is CEO of the Clinton Health Access Initiative. He sat down with Charlotte Wylie of Okta to open the series.</p>
+      <h3>Three conversations, one question</h3>
+      <p>Neil Buddy Shah, chair of Anthropic's Long-Term Benefit Trust and CEO of the Clinton Health Access Initiative, opened the series with Charlotte Wylie of Okta. Hilary Noon of AWS and Michael Lissner of Free Law Project took on what a tech-fluent board looks like in practice. Victor Cordon of Okta closed with how companies can show up for nonprofits.</p>
     </div>
     <div>
       <p class="eyebrow">What we built</p>
@@ -471,7 +471,7 @@ def rootify(html):
     """Rewrite page-relative links to root-relative so pages work from /slug/ folders."""
     for name, route in ROUTES.items():
         html = html.replace(f'href="{name}"', f'href="{route}"')
-    html = re.sub(r'(href|src)="(assets/)', r'\1="/\2', html)
+    html = re.sub(r'(href|src|poster)="(assets/)', r'\1="/\2', html)
     html = html.replace('href="style.css"', 'href="/style.css"')
     return html
 
