@@ -470,7 +470,7 @@ pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", 
 pages["salon-nyc.html"] = dict(title="Salon Recap: New York — Board.Dev", desc="What's our job now? Thirty people working at the intersection of nonprofits, AI, and funding spent an afternoon in New York on what a board needs to be able to do now. Highlights from the second stop of the 2026 Salon Series with Okta and the Atlassian Foundation.", active=-1, body=salon_page(
   eyebrow="2026 Salon Series · New York · September 29",
   h1="What's our job now?",
-  lede="Thirty people working at the intersection of nonprofits, AI, and funding spent an afternoon on a single question: what a nonprofit board needs to be able to do now, when every organization is being forced to reinvent and most boards weren't built for it. The second stop of Building the Board Nonprofits Need Now, presented by Board.Dev and Okta with the Atlassian Foundation.",
+  lede="Thirty nonprofit, AI, and funding leaders spent an afternoon on what a board needs to be able to do now. The second stop of the 2026 Salon Series, with Okta and the Atlassian Foundation.",
   videos=[
    ("nyc-01","Shamina Singh with Zia Khan","Mastercard Center for Inclusive Growth; formerly of The Rockefeller Foundation. What leadership has to decide differently for AI to reach the organizations that need it most."),
    ("nyc-02","Nabiha Syed with Anil Dash","Mozilla Foundation; antitech. What the social sector needs from technology."),
