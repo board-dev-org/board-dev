@@ -375,7 +375,7 @@ pages["privacy-policy.html"] = dict(title="Privacy Policy — Board.Dev", desc="
 # ---------- SALON RECAP: SAN FRANCISCO ----------
 # Self-hosted clips (no YouTube, no third-party script). Drop files in assets/video/ and list them here.
 SF_VIDEOS = [
- ("sf-01","What can a board do that AI can't?","Neil Buddy Shah, Clinton Health Access Initiative, with Charlotte Wylie, Okta"),
+ ("sf-01","What can a board do that AI can't?","Buddy Shah (Clinton Health Access Initiative) with Charlotte Wylie (Okta)"),
  ("sf-02","Building a tech-fluent board","Hilary Noon, AWS, with Michael Lissner, Free Law Project"),
  ("sf-03","Ways to support nonprofits","Victor Cordon, Okta"),
 ]
@@ -404,7 +404,7 @@ pages["salon-sf.html"] = dict(title="Salon Recap: San Francisco — Board.Dev", 
     <div>
       <p class="eyebrow">On stage</p>
       <h3>Three conversations, one question</h3>
-      <p>Neil Buddy Shah, chair of Anthropic's Long-Term Benefit Trust and CEO of the Clinton Health Access Initiative, opened the series with Charlotte Wylie of Okta. Hilary Noon of AWS and Michael Lissner of Free Law Project took on what a tech-fluent board looks like in practice. Victor Cordon of Okta closed with how companies can show up for nonprofits.</p>
+      <p>Buddy Shah, CEO of the Clinton Health Access Initiative and chair of Anthropic's Long-Term Benefit Trust, opened the series with Charlotte Wylie of Okta. Hilary Noon of AWS and Michael Lissner of Free Law Project took on what a tech-fluent board looks like in practice. Victor Cordon of Okta closed with how companies can show up for nonprofits.</p>
     </div>
     <div>
       <p class="eyebrow">What we built</p>
