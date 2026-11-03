@@ -329,6 +329,42 @@ pages["newsletter.html"] = dict(title="Newsletter — Board.Dev", desc="Short mo
 </div></section>
 """)
 
+# ---------- WEBINARS ----------
+pages["webinars.html"] = dict(title="Webinars — Board.Dev", desc="Board.Dev and Dell Technologies webinars on moving nonprofits from AI experimentation to governed practice. Dates coming soon.", active=-1, body=f"""
+<section class="section" style="padding-top:24px"><div class="wrap">
+  <div class="hero compact">
+    <h1>Webinars</h1>
+    <p>Practical sessions on moving from AI experimentation to governed practice, with Board.Dev, Dell Technologies, and the nonprofit leaders featured in our research.</p>
+  </div>
+</div></section>
+
+<section class="section band"><div class="wrap">
+  <div class="callout">
+    <p class="eyebrow">Coming soon</p>
+    <h2>No sessions are scheduled yet. Dates are on the way.</h2>
+    <p>Our first series will explore the findings in <b>Building the Leadership Nonprofits Need to Make AI Work</b>, the Board.Dev and Dell Technologies co-publication. Sessions will cover practical steps for nonprofit leaders, funders, and partners, featuring case study leaders and Dell Technologies experts.</p>
+    <p>Subscribe to the newsletter and we will send you dates and registration links as soon as they are set.</p>
+    <p style="margin-top:24px"><a class="btn" href="newsletter.html">Get notified</a> <a class="btn btn-navy" href="assets/pdfs/board-dev-dell-building-the-leadership-nonprofits-need-to-make-ai-work.pdf" target="_blank" rel="noopener" style="margin-left:8px">Read the report</a></p>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2 style="text-align:center;font-size:24px;font-weight:500;margin-bottom:24px">While you wait</h2>
+  <div class="two">
+    <div>
+      <h3>Build Board Tech Fluency</h3>
+      <p>Board.Dev trains nonprofit boards and executives on AI strategy, cybersecurity, and digital decision-making. Available as a standalone 90-minute session or a multi-week cohort.</p>
+      <a class="btn btn-navy" href="what-we-do.html">See how it works</a>
+    </div>
+    <div>
+      <h3>Free tools for your board</h3>
+      <p>The Board AI Readiness Scorecard, the Tech 28, the Board Brief on AI adoption, and more. Start the conversation before your next board meeting.</p>
+      <a class="btn btn-navy" href="resources.html">Browse resources</a>
+    </div>
+  </div>
+</div></section>
+""")
+
 pages["privacy-policy.html"] = dict(title="Privacy Policy — Board.Dev", desc="Board.Dev privacy policy.", active=-1, body="""
 <section class="section"><div class="wrap prose" style="max-width:720px">
   <h1 style="font-size:27px;font-weight:500">Board.Dev Privacy Policy</h1>
@@ -499,6 +535,7 @@ ROUTES = {
     "get-in-touch.html":   "/get-in-touch/",
     "newsletter.html":     "/newsletter-sign-up/",
     "privacy-policy.html": "/privacy-policy/",
+    "webinars.html":       "/webinars/",
     "salon-sf.html":       "/salon-recap/san-francisco/",
     "salon-nyc.html":      "/salon-recap/new-york/",
 }

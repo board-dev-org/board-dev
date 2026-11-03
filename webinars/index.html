@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Webinars — Board.Dev</title>
+<meta name="description" content="Board.Dev and Dell Technologies webinars on moving nonprofits from AI experimentation to governed practice. Dates coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css?v=afcf8201">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXGZ3Y4XRG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MXGZ3Y4XRG');</script>
+<!-- HubSpot tracking -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/45089564.js"></script>
+<link rel="canonical" href="https://board.dev/webinars/">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="/"><img src="/assets/img/logo.png" alt="Board.Dev" width="229" height="32"></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" onclick="var m=document.getElementById('menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">Menu ☰</button>
+    <ul class="nav-links" id="menu">
+      <li><a href="/what-we-do/">What We Do</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/about-us/">About</a></li>
+      <li><a class="btn" href="/get-in-touch/">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+
+<section class="section" style="padding-top:24px"><div class="wrap">
+  <div class="hero compact">
+    <h1>Webinars</h1>
+    <p>Practical sessions on moving from AI experimentation to governed practice, with Board.Dev, Dell Technologies, and the nonprofit leaders featured in our research.</p>
+  </div>
+</div></section>
+
+<section class="section band"><div class="wrap">
+  <div class="callout">
+    <p class="eyebrow">Coming soon</p>
+    <h2>No sessions are scheduled yet. Dates are on the way.</h2>
+    <p>Our first series will explore the findings in <b>Building the Leadership Nonprofits Need to Make AI Work</b>, the Board.Dev and Dell Technologies co-publication. Sessions will cover practical steps for nonprofit leaders, funders, and partners, featuring case study leaders and Dell Technologies experts.</p>
+    <p>Subscribe to the newsletter and we will send you dates and registration links as soon as they are set.</p>
+    <p style="margin-top:24px"><a class="btn" href="/newsletter-sign-up/">Get notified</a> <a class="btn btn-navy" href="/assets/pdfs/board-dev-dell-building-the-leadership-nonprofits-need-to-make-ai-work.pdf" target="_blank" rel="noopener" style="margin-left:8px">Read the report</a></p>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2 style="text-align:center;font-size:24px;font-weight:500;margin-bottom:24px">While you wait</h2>
+  <div class="two">
+    <div>
+      <h3>Build Board Tech Fluency</h3>
+      <p>Board.Dev trains nonprofit boards and executives on AI strategy, cybersecurity, and digital decision-making. Available as a standalone 90-minute session or a multi-week cohort.</p>
+      <a class="btn btn-navy" href="/what-we-do/">See how it works</a>
+    </div>
+    <div>
+      <h3>Free tools for your board</h3>
+      <p>The Board AI Readiness Scorecard, the Tech 28, the Board Brief on AI adoption, and more. Start the conversation before your next board meeting.</p>
+      <a class="btn btn-navy" href="/resources/">Browse resources</a>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="/"><img src="/assets/img/logo-white.png" alt="Board.Dev" width="229" height="32"></a>
+      <p>Copyright © 2026 Board.Dev – All Rights Reserved.</p>
+      <p>Board.Dev is a social enterprise fiscally sponsored by <a href="https://www.communityin.org/" target="_blank" rel="noopener">Community Initiatives</a>, a 501©(3). Engagements can be structured as corporate partnerships or tax-deductible charitable contributions.</p>
+      <p><a href="/privacy-policy/">Privacy Policy</a></p>
+    </div>
+    <ul>
+      <li><a href="/what-we-do/">What We Do</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/about-us/">About</a></li>
+      <li><a class="btn" href="/get-in-touch/">Get in touch</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.video[data-id]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var id=a.dataset.id, t=a.querySelector('.thumb');
+    t.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    a.classList.add('playing');
+  });
+});
+</script>
+</body>
+</html>
