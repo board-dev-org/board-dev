@@ -507,6 +507,9 @@ REDIRECTS = {
     "/join-form/":  "/get-in-touch/",
     "/newsletter/": "/newsletter-sign-up/",
     "/june-blueprint/": "/assets/pdfs/board-dev-sf-dispatch.pdf",
+    # Short links printed in the Dell co-publication
+    "/playbook/":  "/assets/pdfs/board-dev-board-technology-leadership-playbook.pdf",
+    "/scorecard/": "/assets/pdfs/board-dev-board-ai-readiness-scorecard.pdf",
 }
 
 def rootify(html):
