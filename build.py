@@ -547,6 +547,9 @@ REDIRECTS = {
     # Short links printed in the Dell co-publication
     "/playbook/":  "/assets/pdfs/board-dev-board-technology-leadership-playbook.pdf",
     "/scorecard/": "/assets/pdfs/board-dev-board-ai-readiness-scorecard.pdf",
+    # Old WordPress permalinks for the Dell co-publication (the "Forward this brief" email in the report uses -2)
+    "/dell-insights-report/":   "/assets/pdfs/board-dev-dell-building-the-leadership-nonprofits-need-to-make-ai-work.pdf",
+    "/dell-insights-report-2/": "/assets/pdfs/board-dev-dell-building-the-leadership-nonprofits-need-to-make-ai-work.pdf",
 }
 
 def rootify(html):
